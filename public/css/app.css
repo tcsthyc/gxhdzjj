@@ -1,0 +1,69 @@
+/**
+ * User select
+ */
+/**
+ * Text Mixins
+ */
+/**
+ * Font Mixins
+ */
+/**
+ * Background size
+ */
+/**
+ * Box sizing
+ */
+/**
+ * Appearance
+ */
+/**
+ * Border radius
+ */
+/**
+ * Celarfix
+ */
+/**
+ * Transition mixins
+ */
+/**
+ * Transformation Mixins
+ */
+body {
+  margin: 0; }
+  body .navbar {
+    color: white;
+    position: fixed;
+    top: 0;
+    background: transparent;
+    width: 100%;
+    height: 40px;
+    padding: 12px 20px; }
+    body .navbar .nav-logo {
+      float: left;
+      margin-left: 20px;
+      padding: 4px 8px; }
+      body .navbar .nav-logo a {
+        color: #FFF;
+        font-size: 18px;
+        text-decoration: none; }
+    body .navbar .nav-user {
+      float: left;
+      margin-left: 60px;
+      padding: 4px 8px; }
+      body .navbar .nav-user ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+        body .navbar .nav-user ul a {
+          color: #FFF;
+          text-decoration: none; }
+    body .navbar .nav-cart {
+      float: right;
+      margin-right: 30px;
+      padding: 4px 30px;
+      background-color: rgba(0, 0, 0, 0.35);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+
+/*# sourceMappingURL=app.css.map */

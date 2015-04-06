@@ -1,0 +1,69 @@
+@charset "UTF-8";
+body .page-content {
+  margin-top: 0; }
+  body .page-content .floor-show {
+    background: url(http://qhyxpic.image.kujiale.com/static/KTNPUQCDM5CUGV27ABAQAAAA_1920x662.jpg) no-repeat center center;
+    width: 100%;
+    height: 662px; }
+    body .page-content .floor-show .slogan {
+      font-size: 48px;
+      font-family: 黑体;
+      color: #b83227;
+      text-align: center;
+      position: relative;
+      top: 200px;
+      margin-left: 40px;
+      margin-right: 40px; }
+  body .page-content .floor-steps {
+    width: 100%;
+    height: 220px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #FFF; }
+    body .page-content .floor-steps .step-item {
+      height: 100%;
+      float: left;
+      width: 33%;
+      border-left: 1px solid #FFF;
+      margin-left: -1px;
+      background: url(http://www.ifunw.com/file/upload/201402/18/15-36-29-64-1.jpg) no-repeat center center; }
+      body .page-content .floor-steps .step-item .step-content {
+        position: relative;
+        left: 20px;
+        top: 15px;
+        color: #FFF;
+        line-height: 0;
+        font-family: 黑体; }
+        body .page-content .floor-steps .step-item .step-content .title {
+          font-size: 30px; }
+        body .page-content .floor-steps .step-item .step-content .subtitle {
+          font-size: 16px; }
+  body .page-content .floor-products-list .product-item {
+    width: 100%;
+    height: 440px;
+    border-top: 1px solid #FFF;
+    background-color: rgba(0, 0, 0, 0.2); }
+    body .page-content .floor-products-list .product-item .tools-panel {
+      width: 25%;
+      height: 100%;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center; }
+      body .page-content .floor-products-list .product-item .tools-panel .tool {
+        display: block;
+        padding: 20px;
+        background: white;
+        text-decoration: none; }
+        body .page-content .floor-products-list .product-item .tools-panel .tool.tool-customize {
+          position: relative;
+          top: 20%;
+          height: 20%; }
+        body .page-content .floor-products-list .product-item .tools-panel .tool.tool-add-to-cart {
+          position: relative;
+          top: 20%;
+          margin-top: 20%;
+          height: 20%; }
+
+.hide {
+  display: none; }
+
+/*# sourceMappingURL=home.css.map */

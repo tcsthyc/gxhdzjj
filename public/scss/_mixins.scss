@@ -1,0 +1,296 @@
+
+
+
+/**
+ * User select
+ */
+
+@mixin user-select($select) {
+    -webkit-user-select: $select;
+       -moz-user-select: $select;
+        -ms-user-select: $select;
+            user-select: $select;
+}
+
+
+/**
+ * Text Mixins
+ */
+
+@mixin text-size-adjust($value: none) {
+    -webkit-text-size-adjust: $value;
+       -moz-text-size-adjust: $value;
+            text-size-adjust: $value;
+}
+
+// 触摸高亮透明
+@mixin tap-highlight-transparent() {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; // For some Androids
+}
+
+// 禁用长按效果
+@mixin touch-callout($value: none) {
+    -webkit-touch-callout: $value;
+}
+
+
+/**
+ * Font Mixins
+ */
+
+// 字体平滑
+@mixin font-smoothing($font-smoothing) {
+    -webkit-font-smoothing: $font-smoothing;
+            font-smoothing: $font-smoothing;
+}
+
+
+/**
+ * Background size
+ */
+
+@mixin background-size($size) {
+    -webkit-background-size: $size;
+       -moz-background-size: $size;
+            background-size: $size;
+}
+
+
+/**
+ * Box sizing
+ */
+
+@mixin box-sizing($boxmodel) {
+    -webkit-box-sizing: $boxmodel;
+       -moz-box-sizing: $boxmodel;
+            box-sizing: $boxmodel;
+}
+
+
+/**
+ * Appearance
+ */
+@mixin appearance($val) {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+
+/**
+ * Border radius
+ */
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+}
+
+
+/**
+ * Celarfix
+ */
+@mixin clearfix() {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        display: table;
+        content: '';
+        line-height: 0;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+/**
+ * Transition mixins
+ */
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+            transition: $transition;
+}
+
+@mixin transition-delay($transition-delay) {
+    -webkit-transition-delay: $transition-delay;
+       -moz-transition-delay: $transition-delay;
+            transition-delay: $transition-delay;
+}
+
+@mixin transition-duration($transition-duration) {
+    -webkit-transition-duration: $transition-duration;
+       -moz-transition-duration: $transition-duration;
+            transition-duration: $transition-duration;
+}
+
+@mixin transition-timing-function($transition-timing) {
+    -webkit-transition-timing-function: $transition-timing;
+       -moz-transition-timing-function: $transition-timing;
+            transition-timing-function: $transition-timing;
+}
+
+@mixin transition-property($property) {
+    -webkit-transition-property: $property;
+       -moz-transition-property: $property;
+            transition-property: $property;
+}
+
+@mixin transition-transform($properties...) {
+    // special case cuz of transform vendor prefixes
+    -webkit-transition: -webkit-transform $properties;
+       -moz-transition: -moz-transform $properties;
+            transition: transform $properties;
+}
+
+
+/**
+ * Transformation Mixins
+ */
+@mixin rotate($degrees) {
+    @include transform( rotate($degrees) );
+}
+
+@mixin scale($ratio) {
+    @include transform( scale($ratio) );
+}
+
+@mixin skew($x, $y) {
+    @include transform( skew($x, $y) );
+    -webkit-backface-visibility: hidden;
+}
+
+@mixin translate($x, $y) {
+    @include transform( translate($x, $y) );
+}
+
+@mixin translateX($x) {
+    @include transform( translateX($x) );
+}
+
+@mixin translateY($y) {
+    @include transform( translateY($y) );
+}
+
+@mixin translateZ($z) {
+    @include transform( translateZ($z) );
+}
+
+@mixin translate3d($x, $y, $z) {
+    @include transform( translate3d($x, $y, $z) );
+}
+
+@mixin transform($val) {
+    -webkit-transform: $val;
+       -moz-transform: $val;
+        -ms-transform: $val;
+         -o-transform: $val;
+            transform: $val;
+}
+
+@mixin transform-origin($left, $top) {
+    -webkit-transform-origin: $left $top;
+       -moz-transform-origin: $left $top;
+            transform-origin: $left $top;
+}
+
+
+// Icon
+@mixin icon() {
+  font-family: "aitaobaoh5";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  display: inline-block;
+  line-height: 1;
+  /* 1 */
+  speak: none;
+  /* 2 */
+  -webkit-font-smoothing: antialiased;
+  /* 3 */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Icon logo style
+@mixin icon-logo-square($content, $backgroundColor) {
+    background-color: $backgroundColor;
+    color: #fff;
+
+    width: 48px;
+    height: 48px;
+    display: block;
+
+    font-size: 30px;
+    text-align: center;
+    line-height: 48px;
+
+    @include border-radius(2px);
+
+    &:before {
+        content: $content;
+    }
+}
+
+@mixin icon-logo-circle($content, $backgroundColor) {
+    background-color: $backgroundColor;
+    color: #fff;
+
+    width: 48px;
+    height: 48px;
+    display: block;
+
+    font-size: 30px;
+    text-align: center;
+    line-height: 48px;
+
+    @include border-radius(48px);
+
+    &:before {
+        content: $content;
+    }
+}
+
+@mixin icon-logo-clear($content, $color) {
+    color: $color;
+
+    display: block;
+    
+    font-size: 22px;
+    text-align: center;
+
+    &:before {
+        content: $content;
+    }
+}
+
+@mixin display-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
+@mixin flex-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flex($grow, $shrink, $basis) {
+    -webkit-box-flex: $grow;
+    -webkit-flex: $grow $shrink $basis;
+    flex: $grow $shrink $basis;
+}
+
+@mixin justify-content($alignment) {
+    -webkit-box-align: $alignment;
+    -webkit-flex-pack: $alignment;
+    -webkit-justify-content: $alignment;
+    justify-content: $alignment;
+}
